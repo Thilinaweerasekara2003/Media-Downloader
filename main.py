@@ -25,10 +25,10 @@ from youtube_dl.utils import (
     XAttrMetadataError,
 )
 bot = Client(
-   "Song Downloader",
-   api_id = "2192067",
-   api_hash = "d2e0ba99f1b9cdb632b43633edb76f11",
-   bot_token = "1973533433:AAEbVtiy8SLRycQz3XAm-P0NEN9VJENippc"
+   "Media Downloader",
+   api_id = Config.APP_ID,,
+   api_hash = Config.API_HASH,
+   bot_token = Config.TG_BOT_TOKEN
 )
 
 PRABHASHA = (r"^((?:https?:)?\/\/)"
