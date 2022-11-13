@@ -114,7 +114,7 @@ Hit help button to find out more about how to use me</b>""",
                             ),        
             disable_web_page_preview=True,        
             parse_mode="html",
-            reply_to_message_id=message.message_id
+            reply_to_message_id=Message.id
         )
    else:
        await bot.send_message(
@@ -137,13 +137,13 @@ async def help(client, message):
         await bot.send_message(
                chat_id=message.chat.id,
                text="""<b>Send a Song Name to Download Song </b>""",
-            reply_to_message_id=message.message_id
+            reply_to_message_id=Message.id
         )
     else:
         await bot.send_message(
                chat_id=message.chat.id,
                text="<b>Song Downloader Help.\n\nSyntax: /song `Song Name`</b>",
-            reply_to_message_id=message.message_id
+            reply_to_message_id=Message.id
         ) 
 
 select_img = "https://telegra.ph/file/b38318f5d3e2e5201db40.png"       
