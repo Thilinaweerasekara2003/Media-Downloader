@@ -129,7 +129,7 @@ Hit help button to find out more about how to use me</b>""",
                             ),        
             disable_web_page_preview=True,        
             parse_mode="html",
-            reply_to_message_id=message.message_id
+            reply_to_message_id=Message.id
         )
 @bot.on_message(filters.command("help"))
 async def help(client, message):
