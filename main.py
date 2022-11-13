@@ -42,7 +42,7 @@ def time_to_seconds(time):
     stringt = str(time)
     return sum(int(x) * 60 ** i for i, x in enumerate(reversed(stringt.split(':'))))
                           
-@bot.on_message(filters.text
+@bot.on_edited_message(filters.text
                    & ~filters.edited
                    & filters.regex(PRABHASHA))
 async def ytdl_with_button(c: Client, message: Message):
