@@ -1,5 +1,5 @@
 OpenCC
-Pyrogram v2.0
+Pyrogram 2.0
 TgCrypto
 python-dotenv
 youtube_dl
