@@ -96,40 +96,27 @@ async def ytdl_with_button(c: Client, message: Message):
         ),
         quote=True
     )                                
-@bot.on_message(filters.command("start"))
+@app.on_message(filters.command("start"))
 async def start(client, message):
-   if message.chat.type == 'private':
-       await bot.send_message(
-               chat_id=message.chat.id,
-               text="""<b>Hey There, I'm a Song Downloader Bot. A bot by @FuckMeSoon.
-
-Hit help button to find out more about how to use me</b>""",   
-                            reply_markup=InlineKeyboardMarkup(
-                                [[
-                                        InlineKeyboardButton(
-                                            "Help", callback_data="help"),
-                                        InlineKeyboardButton(
-                                            "Channel", url="https://t.me/sindupotha")
-                                    ]]
-                            ),        
-            disable_web_page_preview=True,        
-            parse_mode="html",
-            reply_to_message_id=Message.id
+    chat_id = message.chat.id
+    user_id = message.from_user["id"]
+    name = message.from_user["first_name"]
+    if message.chat.type == "private":
+        btn = InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        text="Updates channel", url="https://t.me/sindupotha"
+                    ),
+                    InlineKeyboardButton(
+                        text="Support Group", url="https://t.me/sindupotha"
+                    )
+                ]
+            ]
         )
-   else:
-       await bot.send_message(
-               chat_id=message.chat.id,
-               text="""<b>Song Downloader Is Online.\n\n</b>""",   
-                            reply_markup=InlineKeyboardMarkup(
-                                [[
-                                        InlineKeyboardButton(
-                                            "Help", callback_data="help")
-                                        
-                                    ]]
-                            ),        
-            disable_web_page_preview=True,        
-            reply_to_message_id=Message.id
-        )
+    else:
+        btn = None
+    await message.reply(pm_start_text.format(name, user_id), reply_markup=btn)
 @bot.on_message(filters.command("help"))
 async def help(client, message):
     if message.chat.type == 'private':   
