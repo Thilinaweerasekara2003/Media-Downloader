@@ -96,7 +96,7 @@ async def ytdl_with_button(c: Client, message: Message):
         ),
         quote=True
     )                                
-@app.on_message(filters.command("start"))
+@bot.on_message(filters.command("start"))
 async def start(client, message):
     chat_id = message.chat.id
     user_id = message.from_user["id"]
