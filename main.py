@@ -43,7 +43,6 @@ def time_to_seconds(time):
     return sum(int(x) * 60 ** i for i, x in enumerate(reversed(stringt.split(':'))))
                           
 @bot.on_edited_message(filters.text
-                   & ~filters.edited
                    & filters.regex(PRABHASHA))
 async def ytdl_with_button(c: Client, message: Message):
     if Config.UPDATES_CHANNEL is not None:
