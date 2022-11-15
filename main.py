@@ -99,7 +99,7 @@ async def ytdl_with_button(c: Client, message: Message):
 @bot.on_message(filters.command("start"))
 async def start(client, message):
     chat_id = message.chat.id
-    user_id = message.from_user["id"]
+    user_id = message.chat.id
     name = message.from_user["first_name"]
     if message.chat.type == "private":
         btn = InlineKeyboardMarkup(
