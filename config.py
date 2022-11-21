@@ -2,9 +2,9 @@ import os
 #
 
 class Config(object):
-    TG_BOT_TOKEN = "5734386228:AAHw0AUoUQlzrfliSTI1Es87O_F0ngrNO9k"
-    APP_ID = "2192067"
-    API_HASH = "d2e0ba99f1b9cdb632b43633edb76f11"
+    TG_BOT_TOKEN = ""
+    APP_ID = ""
+    API_HASH = ""
     AUDIO_THUMBNAIL = ""
     VIDEO_THUMBNAIL = ""
     UPDATES_CHANNEL = ""
