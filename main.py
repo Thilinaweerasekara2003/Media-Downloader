@@ -132,7 +132,7 @@ async def help(client, message):
             reply_to_message_id=Message.id
         ) 
 
-select_img = "https://telegra.ph/file/b38318f5d3e2e5201db40.png"       
+select_img = "https://telegra.ph/file/e95ac9a301764cd2a00ce.jpg"       
 #Download By Name 
 
 
@@ -447,7 +447,7 @@ def song(client, message):
 print(
     """
 Bot Started!
-Join @FuckMeSoon
+Join @Thilina2004
 """
 )
 bot.run()
